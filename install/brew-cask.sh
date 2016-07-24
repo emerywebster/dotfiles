@@ -7,29 +7,27 @@ brew tap caskroom/versions
 # Install packages
 
 apps=(
-  alfred
-  dash
+  balsamiq-mockups
   dropbox
+  evernote
   firefox
-  firefox-nightly
-  flux
-  glimmerblocker
   google-chrome
-  google-chrome-canary
-  google-drive
-  hammerspoon
-  kaleidoscope
+  iconjar
+  iterm2
+  launchbar
   macdown
-  opera
-  screenflow
+  numi
+  sequel-pro
   slack
-  sourcetree
+  sketch
+  sketch-toolbox
+  skyfonts
+  sqlitebrowser
   spotify
-  sublime-text3
-  transmit
-  virtualbox
+  sublime-text
+  textexpander
   vlc
-  webstorm
+  wunderlist
 )
 
 brew cask install "${apps[@]}"
