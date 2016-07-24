@@ -149,7 +149,7 @@ au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:U
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 
-" PowerLine Config
+" PowerLine Config - likely other plugin doing this
 " set encoding=utf-8 " Necessary to show Unicode glyphs
 " let g:Powerline_symbols = 'fancy'
 
