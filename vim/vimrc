@@ -12,6 +12,7 @@ set autoread                    "Reload files changed outside vim
 set laststatus=2                "Always display the status line
 set hidden                      "Hide buffer instead of closing it
 set pastetoggle=<F2>            "Paste without being smart
+set ic                          "Case incensitive search
 
 " Key mappings
 
@@ -81,8 +82,10 @@ set smartcase
 syntax on
 set cursorline
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+" colorscheme solarized
+set t_Co=256
+colorscheme slate
 highlight clear SignColumn
 
 " Scrolling
@@ -145,3 +148,13 @@ au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:U
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
+
+" PowerLine Config
+" set encoding=utf-8 " Necessary to show Unicode glyphs
+" let g:Powerline_symbols = 'fancy'
+
+" Make Arrows move differently
+nmap <Up> 10k
+nmap <Down> 10j
+nmap <Left> ^
+nmap <Right> $
