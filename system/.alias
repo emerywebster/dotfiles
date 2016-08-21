@@ -5,6 +5,13 @@ alias g="git"
 alias v="vim"
 alias rr="rm -rf"
 alias json="json -c"
+alias d="cd ~/Documents/Dropbox"
+alias dl="cd ~/Downloads"
+alias dk="cd ~/Desktop"
+alias s="cd ~/Sites"
+alias g="git"
+alias h="history"
+alias j="jobs"
 
 is-executable hub && eval "$(hub alias -s)" # alias git=hub
 
@@ -83,3 +90,19 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 # App-specific
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
+# Edit the hosts file
+
+alias hosts='subl /etc/hosts'
+
+# Flush DNS
+
+alias flushdns='dscacheutil -flushcache'
+
+## ssh for emerywebster.com
+
+alias sshew='ssh webb@107.170.99.124'
+
+## Rails
+
+alias bert='bundle exec rake test'

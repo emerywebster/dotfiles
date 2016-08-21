@@ -4,13 +4,6 @@ manpdf() {
   man -t "$1" | open -f -a /Applications/Preview.app/
 }
 
-# Dev
-
-d() {
-  $EDITOR_ALT ${1:-.}
-  $GIT_GUI ${1:-.}
-}
-
 # Show and select the given file(s) in the Finder
 # Source: https://github.com/janmoesen/tilde/blob/348c90caf004b7185816e620f240fd2406e4eace/.bash/commands#L259-L299
 
