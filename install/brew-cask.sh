@@ -7,7 +7,6 @@ brew tap caskroom/versions
 # Install packages
 
 apps=(
-  balsamiq-mockups
   dropbox
   evernote
   firefox
@@ -24,7 +23,7 @@ apps=(
   skyfonts
   sqlitebrowser
   spotify
-  sublime-text
+  sublime-text2
   textexpander
   vlc
   wunderlist
