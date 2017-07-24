@@ -103,7 +103,8 @@ alias flushdns='dscacheutil -flushcache'
 
 alias sshew='ssh webb@107.170.99.124'
 
-## Rails
+## Environment
 
 alias bert='bundle exec rake test'
 alias jekylls='bundle exec jekyll serve'
+alias dc='docker-compose'
