@@ -7,6 +7,7 @@ brew tap caskroom/versions
 # Install packages
 
 apps=(
+  atom
   dropbox
   evernote
   firefox
@@ -23,9 +24,8 @@ apps=(
   skyfonts
   sqlitebrowser
   spotify
-  sublime-text2
   textexpander
-  vlc
+  vscode
   wunderlist
 )
 

@@ -1,7 +1,7 @@
 [user]
   name = Webb Henderson
   email = webb.henderson@gmail.com
-  
+
 [alias]
   co = checkout
   ci = commit
@@ -22,17 +22,17 @@
 
 [color]
     status = auto
-    ui = true 
-  
-[core]
-  excludesfile = /Users/Webster/.gitignore_global
+    ui = true
 
 [github]
   user = emerywebster
   token = 3f1ad681957dd392ab0fccea8b41fc07
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+  path =
 [mergetool "sourcetree"]
   # cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   # trustExitCode = true
+[core]
+	editor = code --wait
+	excludesfile = /Users/webbhenderson/.gitignore_global

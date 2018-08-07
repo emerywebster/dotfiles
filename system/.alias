@@ -89,7 +89,6 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # App-specific
 
-alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # Edit the hosts file
 
@@ -108,5 +107,5 @@ alias sshew='ssh webb@107.170.99.124'
 alias bert='bundle exec rake test'
 alias jekylls='bundle exec jekyll serve'
 alias dc='docker-compose'
-alias es='ember s --proxy=http://localhost:3000'
-alias dck='docker container kill fitbot_client_1'
+alias es='ember serve --live-reload=false'
+alias eslr='emer serve'
