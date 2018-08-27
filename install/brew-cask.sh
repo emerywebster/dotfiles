@@ -22,6 +22,7 @@ apps=(
   iterm2
   macdown
   numi
+  rocket
   sequel-pro
   slack
   sketch
