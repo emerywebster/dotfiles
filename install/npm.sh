@@ -1,13 +1,14 @@
 brew install nvm
 
-nvm install 5
-nvm use 5
-nvm alias default 5
+nvm install node
+nvm use stable
+nvm alias default stable
 
 # Globally install with npm
 
 packages=(
   diff-so-fancy
+  ember-cli
   grunt
   gulp
   http-server

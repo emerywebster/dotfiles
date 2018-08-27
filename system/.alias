@@ -1,0 +1,53 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Aliases
+
+alias _="sudo"
+alias dl="cd ~/Downloads"
+alias dk="cd ~/Desktop"
+alias g="git"
+alias j="jobs"
+alias json="json -c"
+alias rr="rm -rf"
+alias s="cd ~/Sites"
+alias h="history"
+alias v="vim"
+
+## Environment
+
+alias be="bundle exec"
+alias es='ember serve --live-reload=false'
+alias eslr='emer serve'
+alias jekylls='bundle exec jekyll serve'
+
+## Request using GET, POST, etc. method
+
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+  alias "$method"="lwp-request -m '$method'"
+done
+
+## Recursively remove Apple meta files
+
+alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;"
+alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
+
+## Miscellaneous
+
+alias quit="exit"
+alias week="date +%V"
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+
+## Edit the hosts file
+
+alias hosts='atom /etc/hosts'
+
+## Flush DNS
+
+alias flushdns='dscacheutil -flushcache'
+
+### ssh for emerywebster.com
+
+alias sshew='ssh webb@107.170.99.124'

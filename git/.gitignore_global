@@ -1,9 +1,6 @@
 *~
 ._*
 .DS_Store
-.idea
 node_modules
 bower_components
-Gemfile.lock
-package-lock.json
-jsconfig.json
+npm-debug.log

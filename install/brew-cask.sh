@@ -1,20 +1,25 @@
 # Install Caskroom
 
-brew tap caskroom/cask
-brew install brew-cask
 brew tap caskroom/versions
+brew tap caskroom/cask
+brew tap caskroom/fonts
 
 # Install packages
 
 apps=(
+  1password
+  adobe-creative-cloud
+  alfred
   atom
+  cleanmymac
+  cloudapp
   dropbox
   evernote
   firefox
   google-chrome
+  google-drive-file-stream
   iconjar
   iterm2
-  launchbar
   macdown
   numi
   sequel-pro
@@ -23,10 +28,9 @@ apps=(
   sketch-toolbox
   skyfonts
   sqlitebrowser
+  spectacle
   spotify
-  textexpander
-  vscode
-  wunderlist
+  visual-studio-code
 )
 
 brew cask install "${apps[@]}"

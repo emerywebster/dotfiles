@@ -4,7 +4,7 @@
 
 # OS
 
-if [ "$(uname -s)" = "Darwin" ]; then
+if [ "$(uname -s)" = "webbhenderson" ]; then
   OS="OSX"
 else
   OS=$(uname -s)
