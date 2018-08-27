@@ -13,6 +13,7 @@ apps=(
   battery
   coreutils
   cmake
+  dnsmasq
   dockutil
   ffmpeg
   fasd
@@ -20,22 +21,28 @@ apps=(
   git
   gnu-sed --with-default-names
   grep --with-default-names
+  heroku
+  heroku-node
   hub
   httpie
   imagemagick
   jq
   mackup
   peco
+  postgresql
   psgrep
   python
+  redis
+  ruby
   shellcheck
   ssh-copy-id
-  svn
+  subversion
   tree
   vim
   watchman
   wget
   wifi-password
+  z
   zsh
 )
 
