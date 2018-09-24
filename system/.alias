@@ -20,7 +20,7 @@ alias v="vim"
 
 alias be="bundle exec"
 alias es='ember serve --live-reload=false'
-alias eslr='emer serve'
+alias eslr='ember serve'
 alias jekylls='bundle exec jekyll serve'
 
 ## Request using GET, POST, etc. method
