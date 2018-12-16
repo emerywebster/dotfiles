@@ -16,6 +16,7 @@ apps=(
   dropbox
   evernote
   firefox
+  font-fira-code
   google-chrome
   google-drive-file-stream
   iconjar
