@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Set name of the theme to load. https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="cobalt2"
+# ZSH_THEME="cobalt2"
+ZSH_THEME="spaceship"
 
 # oh-my-zsh
 export ZSH="/Users/webbhenderson/.oh-my-zsh"
@@ -11,6 +12,7 @@ plugins=(
   colored-man-pages
   extract
   git
+  git autosuggestions
   osx
 )
 
