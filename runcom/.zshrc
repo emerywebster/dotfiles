@@ -29,6 +29,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Source all the other files
-for DOTFILE in ~/dotfiles/system/.{alias,nvm,rvm}; do
+for DOTFILE in ~/dotfiles/system/.{alias,function,nvm,rvm}; do
   source "$DOTFILE"
 done

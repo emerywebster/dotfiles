@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+function df-help () {
+  echo "Usage: df-<command>"
+  echo
+  echo "Commands:"
+  echo "   clean            Clean up caches (brew, nvm, gem)"
+  echo "   edit             Open dotfiles in IDE ($DOTFILES_IDE) and Git GUI ($DOTFILES_GIT_GUI)"
+  echo "   help             This help message"
+  echo "   update           Update packages and pkg managers (OS, brew, npm, gem)"
+}
+
+function df-edit () {
+  sh -c "$DOTFILES_IDE $DOTFILES_DIR"
+  sh -c "$DOTFILES_GIT_GUI $DOTFILES_DIR"
+}
+
+function df-update () {
+  sudo softwareupdate -i -a
+  brew update
+  brew upgrade
+  npm install npm -g
+  npm update -g
+  gem update --system
+  gem update
+}
+
+function df-clean () {
+  brew cleanup
+  gem cleanup
+  . "$NVM_DIR/nvm.sh"; nvm cache clear
+}
