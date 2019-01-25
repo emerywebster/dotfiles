@@ -28,6 +28,13 @@ export NVM_DIR="$HOME/.nvm"
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# React Native
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # Source all the other files
 for DOTFILE in ~/dotfiles/system/.{alias,function,nvm,rvm}; do
   source "$DOTFILE"
