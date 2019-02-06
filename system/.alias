@@ -19,8 +19,8 @@ alias v="vim"
 ## Environment
 
 alias be="bundle exec"
-alias es='ember serve --live-reload=false'
-alias eslr='ember serve'
+alias es='ember serve --live-reload=false --port 0'
+alias eslr='ember serve --port 0'
 alias jekylls='bundle exec jekyll serve'
 
 ## Request using GET, POST, etc. method
