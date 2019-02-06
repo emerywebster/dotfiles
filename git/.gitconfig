@@ -27,6 +27,7 @@
   p = push
   pf = push --force
   pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  rb = "!git rebase -i $(git log --merges --oneline | head -1 | awk '{print $1;}')"
   show-ignored = "! git clean -ndX | perl -pe 's/Would remove/Ignored:/'"
   st = status
   stl = ls-files -m -o --exclude-standard
