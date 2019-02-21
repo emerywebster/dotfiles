@@ -25,7 +25,7 @@ alias jekylls="bundle exec jekyll serve"
 
 ## Homebrew
 
-alias brewup="brew update; brew upgrade; brew prune; brew cleanup; brew doctor"
+alias brewup="brew update; brew upgrade; brew cleanup --prune-prefix; brew cleanup; brew doctor"
 
 ## Request using GET, POST, etc. method
 
