@@ -19,9 +19,13 @@ alias v="vim"
 ## Environment
 
 alias be="bundle exec"
-alias es='ember serve --live-reload=false --port 4200'
-alias eslr='ember serve --port 4200'
-alias jekylls='bundle exec jekyll serve'
+alias es="ember serve --live-reload=false --port 4200"
+alias eslr="ember serve --port 4200"
+alias jekylls="bundle exec jekyll serve"
+
+## Homebrew
+
+alias brewup="brew update; brew upgrade; brew prune; brew cleanup; brew doctor"
 
 ## Request using GET, POST, etc. method
 
