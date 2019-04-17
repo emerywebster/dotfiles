@@ -39,3 +39,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 for DOTFILE in ~/dotfiles/system/.{alias,function,nvm,rvm}; do
   source "$DOTFILE"
 done
+
+# direnv for environment variable mgmt
+eval "$(direnv hook zsh)"
