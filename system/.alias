@@ -23,6 +23,8 @@ alias es="ember serve --live-reload=false --port 4200"
 alias eslr="ember serve --port 4200"
 alias jekylls="bundle exec jekyll serve"
 
+alias reload="source ~/.zshrc"
+
 ## Homebrew
 
 alias brewup="brew update; brew upgrade; brew cleanup --prune-prefix; brew cleanup; brew doctor"
