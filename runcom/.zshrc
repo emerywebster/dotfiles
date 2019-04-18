@@ -12,7 +12,6 @@ plugins=(
   colored-man-pages
   extract
   git
-  git autosuggestions
   osx
 )
 
