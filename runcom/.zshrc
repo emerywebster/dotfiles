@@ -6,7 +6,7 @@
 ZSH_THEME="spaceship"
 
 # oh-my-zsh
-export ZSH="/Users/webbhenderson/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 plugins=(
   colored-man-pages
