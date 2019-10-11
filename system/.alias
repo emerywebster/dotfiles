@@ -21,6 +21,7 @@ alias v="vim"
 alias be="bundle exec"
 alias es="ember serve --live-reload=false --port 4200"
 alias eslr="ember serve --port 4200"
+alias esp="ember s --live-reload=false --proxy=https://thefitbot-staging.herokuapp.com -p 4200"
 alias jekylls="bundle exec jekyll serve"
 
 alias reload="source ~/.zshrc"
