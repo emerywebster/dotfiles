@@ -16,12 +16,34 @@ alias s="cd ~/Sites"
 alias h="history"
 alias v="vim"
 
+## git
+
+alias gm="git commit -m "
+alias grim="git rebase -i master"
+alias grid="git rebase -i develop"
+alias gam="git commit --amend"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+alias gsoft!="git reset --soft HEAD^"
+alias gbs="git bisect start"
+alias gbg="git bisect good"
+alias gbb="git bisect bad"
+alias gbr="git bisect reset"
+alias gcp="git cherry-pick"
+alias gcpc="git cherry-pick --continue"
+alias gcpa="git cherry-pick --abort"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gpo="git pull origin"
+
 ## Environment
 
 alias be="bundle exec"
 alias es="ember serve --live-reload=false --port 4200"
 alias eslr="ember serve --port 4200"
 alias esp="ember s --live-reload=false --proxy=https://thefitbot-staging.herokuapp.com -p 4200"
+alias ysl="yarn run start:local --live-reload=false"
+alias yss="yarn run start:staging --live-reload=false"
+alias ysp="yarn run start:prod --live-reload=false"
 alias jekylls="bundle exec jekyll serve"
 
 alias reload="source ~/.zshrc"
