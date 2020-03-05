@@ -1,8 +1,8 @@
 # Install Caskroom
 
-brew tap caskroom/versions
-brew tap caskroom/cask
-brew tap caskroom/fonts
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-cask
+brew tap homebrew/cask-fonts
 
 # Install packages
 
@@ -13,7 +13,7 @@ apps=(
   atom
   cleanmymac
   cloudapp
-  contrast
+  # contrast
   dropbox
   evernote
   fantastical
@@ -31,7 +31,6 @@ apps=(
   sequel-pro
   slack
   sketch
-  sketch-toolbox
   skyfonts
   sqlitebrowser
   spectacle

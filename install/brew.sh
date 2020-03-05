@@ -13,14 +13,15 @@ apps=(
   battery
   coreutils
   cmake
+  direnv
   dnsmasq
   dockutil
   ffmpeg
   fasd
   gifsicle
   git
-  gnu-sed --with-default-names
-  grep --with-default-names
+  gnu-sed
+  grep
   heroku
   heroku-node
   hub
@@ -36,7 +37,6 @@ apps=(
   ruby
   shellcheck
   ssh-copy-id
-  subversion
   tree
   vim
   watchman
