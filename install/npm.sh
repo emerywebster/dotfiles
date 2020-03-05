@@ -1,8 +1,6 @@
 brew install nvm
 
-nvm install 8
-nvm use 8
-nvm alias default 8
+nvm install node
 
 # Globally install with npm
 
