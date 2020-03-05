@@ -3,7 +3,7 @@
 
 # Set name of the theme to load. https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="cobalt2"
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship" -> `npm install -g spaceship-prompt`
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
@@ -41,3 +41,7 @@ done
 
 # direnv for environment variable mgmt
 eval "$(direnv hook zsh)"
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship
