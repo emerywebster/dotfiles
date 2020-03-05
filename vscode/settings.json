@@ -1,0 +1,20 @@
+{
+    "workbench.colorTheme": "Material Theme High Contrast",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": 1,
+    "editor.tabSize": 2,
+    "editor.fontFamily": "'Fira Code'",
+    "git.confirmSync": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "prettier.printWidth": 120,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true,
+    "sasslint.configFile": ".sass-lint.yml",
+    "editor.formatOnSave": false
+}
