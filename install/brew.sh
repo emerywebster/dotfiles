@@ -47,3 +47,8 @@ apps=(
 )
 
 brew install "${apps[@]}"
+
+# Auto-update every 24 hrs
+# github.com/DomT4/homebrew-autoupdate
+brew tap domt4/autoupdate
+brew autoupdate --start 86400
