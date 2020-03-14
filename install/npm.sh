@@ -2,6 +2,11 @@ brew install nvm
 
 nvm install node
 
+# Expected for ember client
+nvm install node 10
+nvm use 10
+nvm alias default 10
+
 # Globally install with npm
 
 packages=(
