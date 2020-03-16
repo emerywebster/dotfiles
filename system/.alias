@@ -71,7 +71,7 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 ## Edit the hosts file
 
-alias hosts='atom /etc/hosts'
+alias hosts='code /etc/hosts'
 
 ## Flush DNS
 
