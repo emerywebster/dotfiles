@@ -26,7 +26,7 @@ alias gam="git commit --amend"
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 alias gsoft!="git reset --soft HEAD^"
-alias ghard="git reset --hard origin/$(current_branch)"
+alias ghard="git reset --hard origin"
 alias gbs="git bisect start"
 alias gbg="git bisect good"
 alias gbb="git bisect bad"
@@ -35,7 +35,7 @@ alias gcp="git cherry-pick"
 alias gcpc="git cherry-pick --continue"
 alias gcpa="git cherry-pick --abort"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias gpo="git pull origin $(current_branch)"
+alias gpo="git pull origin"
 
 ## Environment
 
