@@ -13,7 +13,7 @@ apps=(
   atom
   cleanmymac
   cloudapp
-  # contrast
+  dash
   dropbox
   evernote
   fantastical
