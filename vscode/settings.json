@@ -16,5 +16,6 @@
     "prettier.singleQuote": true,
     "prettier.useTabs": true,
     "sasslint.configFile": ".sass-lint.yml",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.wordWrap": "on"
 }
