@@ -1,11 +1,3 @@
-# Install Caskroom
-
-brew tap homebrew/cask-versions
-brew tap homebrew/cask-cask
-brew tap homebrew/cask-fonts
-
-# Install packages
-
 apps=(
   1password
   adobe-creative-cloud
@@ -25,6 +17,7 @@ apps=(
   hyper
   iconjar
   iterm2
+  loom
   macdown
   numi
   rocket
@@ -32,10 +25,8 @@ apps=(
   slack
   sketch
   skyfonts
-  sqlitebrowser
   spectacle
   spotify
-  things
   visual-studio-code
 )
 

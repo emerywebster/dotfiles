@@ -9,7 +9,6 @@ brew upgrade
 apps=(
   bash-completion2
   bats
-  battery
   coreutils
   cmake
   direnv
