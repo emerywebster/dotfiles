@@ -34,6 +34,10 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Ruby
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+
 # Source all the other files
 for DOTFILE in ~/dotfiles/system/.{alias,function,nvm,rvm}; do
   source "$DOTFILE"
