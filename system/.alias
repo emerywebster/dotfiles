@@ -47,7 +47,7 @@ alias esp="ember s --live-reload=false --proxy=https://thefitbot-staging.herokua
 alias ysl="yarn run start:local --live-reload=false"
 alias yss="yarn run start:staging --live-reload=false"
 alias yspp="yarn run start:prod --live-reload=false"
-alias jekylls="bundle exec jekyll serve"
+alias js="bundle exec jekyll serve"
 
 alias reload="source ~/.zshrc"
 
