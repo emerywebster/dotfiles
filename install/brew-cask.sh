@@ -19,6 +19,7 @@ apps=(
   iterm2
   loom
   macdown
+  notion
   numi
   rocket
   sequel-pro
@@ -28,6 +29,7 @@ apps=(
   spectacle
   spotify
   visual-studio-code
+  zoomus
 )
 
 brew cask install "${apps[@]}"
