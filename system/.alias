@@ -20,6 +20,7 @@ alias v="vim"
 
 alias gm="git commit -m "
 alias gf="git fetch"
+alias grimm="git rebase -i main"
 alias grim="git rebase -i master"
 alias grid="git rebase -i develop"
 alias gam="git commit --amend"

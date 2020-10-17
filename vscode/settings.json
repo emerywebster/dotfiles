@@ -2,7 +2,7 @@
     "workbench.colorTheme": "Material Theme High Contrast",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.activityBar.visible": false,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "editor.tabSize": 2,
     "editor.fontFamily": "'Fira Code'",
     "git.confirmSync": false,
