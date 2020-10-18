@@ -34,18 +34,23 @@ function df-clean () {
 
 function gh-pages-deploy () {
   directory=_site
-  branch=gh-pages
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  deploy_branch=gh-pages
   build_command() {
     bundle exec jekyll build
   }
 
-  echo -e "\033[0;32mGenerating site...\033[0m"
-  build_command
+  if [[ "$current_branch" != "main" ]]; then
+    echo "\033[0;32mAborting - switch to 'main' branch\033[0m";
+  else
+    echo -e "\033[0;32mGenerating site...\033[0m"
+    build_command
 
-  echo -e "\033[0;32mDeploying $branch branch...\033[0m"
-  cd $directory &&
-    git add --all &&
-    git commit -m "Deploy updates" &&
-    git push origin $branch
-  cd ..
+    echo -e "\033[0;32mDeploying $deploy_branch branch...\033[0m"
+    cd $directory &&
+      git add --all &&
+      git commit -m "Deploy updates" &&
+      git push origin $branch
+    cd ..
+  fi
 }
