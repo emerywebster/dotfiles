@@ -14,6 +14,7 @@ apps=(
   font-fira-code
   google-chrome
   google-drive-file-stream
+  grammarly
   hyper
   iconjar
   iterm2
