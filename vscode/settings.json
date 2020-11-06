@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Material Theme High Contrast",
+    "workbench.colorTheme": "Night Owl",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.activityBar.visible": false,
     "window.zoomLevel": 2,
@@ -18,5 +18,6 @@
     "sasslint.configFile": ".sass-lint.yml",
     "editor.formatOnSave": false,
     "editor.wordWrap": "on",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
 }
