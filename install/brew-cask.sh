@@ -1,6 +1,7 @@
 apps=(
   1password
   adobe-creative-cloud
+  aerial
   alfred
   atom
   cleanmymac
