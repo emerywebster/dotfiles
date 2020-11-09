@@ -1,23 +1,26 @@
 {
     "workbench.colorTheme": "Night Owl",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.activityBar.visible": false,
-    "window.zoomLevel": 2,
+    "workbench.activityBar.visible": true,
+    "window.zoomLevel": 1,
+    "editor.fontSize": 16,
     "editor.tabSize": 2,
-    "editor.fontFamily": "'Fira Code'",
+    "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
     "git.confirmSync": false,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.iconTheme": "vscode-icons",
     "editor.formatOnPaste": false,
     "editor.formatOnType": false,
     "prettier.printWidth": 120,
     "prettier.singleQuote": true,
     "prettier.useTabs": true,
     "sasslint.configFile": ".sass-lint.yml",
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.wordWrap": "on",
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "files.autoSave": "onFocusChange",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.statusBar.visible": true
 }
