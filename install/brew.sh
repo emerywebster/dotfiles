@@ -8,6 +8,7 @@ brew upgrade
 
 apps=(
   bash-completion2
+  bat
   bats
   coreutils
   cmake
