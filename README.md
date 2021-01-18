@@ -18,6 +18,7 @@ Based on [Lars Kappert's dotfiles](https://github.com/webpro/dotfiles)
 ### Apps
 
 - [Bear](https://apps.apple.com/us/app/bear/id1091189122?mt=12)
+- [Contrast](https://apps.apple.com/us/app/contrast-color-accessibility/id1254981365?mt=12)
 - [Dato](https://apps.apple.com/us/app/dato/id1470584107?mt=12)
 - [To Do](https://apps.apple.com/us/app/microsoft-to-do/id1274495053?mt=12)
 - [Vanilla](https://matthewpalmer.net/vanilla/)
