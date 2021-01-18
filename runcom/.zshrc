@@ -13,10 +13,8 @@ plugins=(
   extract
   git
   osx
+  z
 )
-
-# Include Z
-. /usr/local/etc/profile.d/z.sh
 
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
@@ -46,6 +44,7 @@ done
 # direnv for environment variable mgmt
 eval "$(direnv hook zsh)"
 
-  # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit
+promptinit
+prompt spaceship
