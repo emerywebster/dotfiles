@@ -18,6 +18,7 @@ apps=(
   hyper
   iconjar
   iterm2
+  linear
   loom
   macdown
   notion
