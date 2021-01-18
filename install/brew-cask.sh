@@ -30,6 +30,7 @@ apps=(
   skyfonts
   spectacle
   spotify
+  vanilla
   visual-studio-code
   zoomus
 )
