@@ -12,7 +12,6 @@ apps=(
   fantastical
   figma
   firefox
-  font-fira-code
   google-chrome
   google-drive-file-stream
   grammarly
@@ -34,4 +33,4 @@ apps=(
   zoomus
 )
 
-brew cask install "${apps[@]}"
+brew install --cask "${apps[@]}"
