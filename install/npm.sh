@@ -18,6 +18,7 @@ packages=(
   tldr
   underscore-cli
   vtop
+  yarn
 )
 
 npm install -g "${packages[@]}"

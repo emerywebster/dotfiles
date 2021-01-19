@@ -35,6 +35,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Ruby
 export GEM_HOME=$HOME/gems
 export PATH=$HOME/gems/bin:$PATH
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # Source all the other files
 for DOTFILE in ~/dotfiles/system/.{alias,function,nvm,rvm}; do
@@ -48,3 +49,6 @@ eval "$(direnv hook zsh)"
 autoload -U promptinit
 promptinit
 prompt spaceship
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
