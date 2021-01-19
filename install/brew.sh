@@ -20,6 +20,7 @@ apps=(
   gifsicle
   git
   gnu-sed
+  golang
   grep
   heroku
   heroku-node
