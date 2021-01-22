@@ -7,7 +7,6 @@
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 plugins=(
   colored-man-pages
   extract
@@ -15,6 +14,7 @@ plugins=(
   osx
   z
 )
+source $ZSH/oh-my-zsh.sh
 
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
@@ -41,6 +41,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export GOPRIVATE="github.com/moovfinancial"
 
 # Source all the other files
 for DOTFILE in ~/dotfiles/system/.{alias,function,nvm,rvm}; do
