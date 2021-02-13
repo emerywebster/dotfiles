@@ -54,3 +54,8 @@ function gh-pages-deploy () {
     cd ..
   fi
 }
+
+# grep alias shortcut
+al() {
+	 alias | grep -e $1
+ }
