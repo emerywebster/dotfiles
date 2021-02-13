@@ -20,9 +20,9 @@ alias v="vim"
 
 alias gm="git commit -m "
 alias gf="git fetch"
-alias grimm="git rebase -i main"
-alias grim="git rebase -i master"
 alias grid="git rebase -i develop"
+alias grim="git rebase -i master"
+alias grimm="git rebase -i main"
 alias gam="git commit --amend"
 alias gfixup="git commit --amend --no-edit"
 alias grc="git rebase --continue"
@@ -38,6 +38,7 @@ alias gcpc="git cherry-pick --continue"
 alias gcpa="git cherry-pick --abort"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gpo="git pull origin"
+alias gbi='git for-each-ref --sort=committerdate refs/heads/ --format='\''%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:short)%(color:reset))'\'
 
 ## Environment
 
@@ -84,3 +85,7 @@ alias flushdns='dscacheutil -flushcache'
 ### ssh for emerywebster.com
 
 alias sshew='ssh webb@107.170.99.124'
+
+### ngrok
+
+alias ngrok="./ngrok http"
