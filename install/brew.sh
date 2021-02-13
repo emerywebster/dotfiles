@@ -25,6 +25,7 @@ apps=(
   heroku
   heroku-node
   hub
+  hugo
   httpie
   imagemagick
   jq
