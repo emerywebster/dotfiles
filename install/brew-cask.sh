@@ -32,7 +32,7 @@ apps=(
   spotify
   vanilla
   visual-studio-code
-  zoomus
+  zoom
 )
 
 brew install --cask "${apps[@]}"
