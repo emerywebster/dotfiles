@@ -10,6 +10,7 @@ packages=(
   grunt
   gulp
   http-server
+  netlify
   nodemon
   release-it
   spaceship-prompt
