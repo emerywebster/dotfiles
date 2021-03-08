@@ -1,6 +1,5 @@
 apps=(
   1password
-  adobe-creative-cloud
   aerial
   alfred
   atom
@@ -23,6 +22,7 @@ apps=(
   macdown
   notion
   numi
+  postman
   rocket
   sequel-pro
   slack

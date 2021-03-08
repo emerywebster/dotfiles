@@ -1,13 +1,14 @@
 # Install Homebrew
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 brew upgrade
 
 # Install packages
 
 apps=(
-  bash-completion2
   bat
   bats
   coreutils
@@ -15,15 +16,12 @@ apps=(
   direnv
   dnsmasq
   dockutil
-  ffmpeg
   fasd
   gifsicle
   git
   gnu-sed
   golang
   grep
-  heroku
-  heroku-node
   hub
   hugo
   httpie
@@ -36,7 +34,6 @@ apps=(
   python
   redis
   ruby
-  shellcheck
   ssh-copy-id
   tree
   vim
@@ -44,7 +41,6 @@ apps=(
   wget
   wifi-password
   z
-  zsh
 )
 
 brew install "${apps[@]}"

@@ -13,7 +13,6 @@ VSCODE_HOME="$HOME/Library/Application Support/Code"
 
 # Bunch of symlinks
 
-ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/runcom/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
