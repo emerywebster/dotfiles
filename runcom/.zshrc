@@ -134,6 +134,6 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export GOPRIVATE="github.com/moovfinancial"
 
 # Source all the other files
-for DOTFILE in ~/dotfiles/system/.{alias,function,nvm,rvm}; do
+for DOTFILE in ~/dotfiles/system/.{alias,function,rvm}; do
   source "$DOTFILE"
 done
