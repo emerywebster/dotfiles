@@ -12,7 +12,7 @@ apps=(
   figma
   firefox
   google-chrome
-  google-drive-file-stream
+  google-drive
   grammarly
   hyper
   iconjar
