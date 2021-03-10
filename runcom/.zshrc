@@ -106,8 +106,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Homebrew
-export PATH="/usr/local/sbin:$PATH"
+# Homebrew (Intel)
+# export PATH="/usr/local/sbin:$PATH"
+
+# Homebrew (ARM)
+export PATH=/opt/homebrew/bin:$PATH
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

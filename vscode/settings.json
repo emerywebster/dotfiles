@@ -2,7 +2,6 @@
     "workbench.colorTheme": "Night Owl",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.activityBar.visible": true,
-    "window.zoomLevel": 1,
     "editor.fontSize": 16,
     "editor.tabSize": 2,
     "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
