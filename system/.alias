@@ -56,6 +56,8 @@ alias reload="source ~/.zshrc"
 ## Homebrew
 
 alias brewup="brew update; brew upgrade; brew cleanup --prune-prefix; brew doctor"
+alias xbrew="arch -arm64 brew"
+alias xbrewup="xbrew update; xbrew upgrade; xbrew cleanup --prune-prefix; xbrew doctor"
 
 ## Request using GET, POST, etc. method
 
