@@ -43,6 +43,12 @@ function gh-pages-deploy () {
   if [[ "$current_branch" != "main" ]]; then
     echo "\033[0;32mAborting - switch to 'main' branch\033[0m";
   else
+    echo -e "\033[0;32mDeleting old content...\033[0m"
+    rm -rf $directory
+
+    echo -e "\033[0;32mChecking out $deploy_branch....\033[0m"
+    git worktree add $directory $deploy_branch
+
     echo -e "\033[0;32mGenerating site...\033[0m"
     build_command
 
@@ -50,8 +56,12 @@ function gh-pages-deploy () {
     cd $directory &&
       git add --all &&
       git commit -m "Deploy updates" &&
-      git push origin $branch
+      git push origin $deploy_branch
+
+    echo -e "\033[0;32mCleaning up...\033[0m"
     cd ..
+    git worktree remove $directory
+
   fi
 }
 
