@@ -3,7 +3,6 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.activityBar.visible": true,
     "editor.fontSize": 16,
-    "editor.tabSize": 2,
     "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
     "git.confirmSync": false,
     "[javascript]": {
@@ -15,17 +14,18 @@
     "prettier.singleQuote": true,
     "prettier.useTabs": true,
     "sasslint.configFile": ".sass-lint.yml",
-    "editor.formatOnSave": false,
     "editor.wordWrap": "on",
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "files.autoSave": "onFocusChange",
     "workbench.iconTheme": "vscode-icons",
     "workbench.statusBar.visible": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "default",
-            "filenamePattern": "git-rebase-todo"
-        }
-    ]
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "go.toolsManagement.autoUpdate": true,
+    "window.zoomLevel": 1
 }
