@@ -85,7 +85,7 @@ plugins=(
   colored-man-pages
   extract
   git
-  osx
+  macos
   z
 )
 
