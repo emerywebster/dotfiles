@@ -10,7 +10,6 @@ brew upgrade
 
 apps=(
   bat
-  bats
   coreutils
   cmake
   direnv
