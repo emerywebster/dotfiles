@@ -69,3 +69,17 @@ function gh-pages-deploy () {
 al() {
 	 alias | grep -e $1
  }
+
+ function dockerclean() {
+   echo stopping containers...
+  docker stop $(docker ps -q)
+
+  echo removing stopped containers
+  docker container prune -f
+
+  echo removing volumes
+  docker volume prune -f
+
+  echo pruning networks:
+  docker network prune -f
+ }
