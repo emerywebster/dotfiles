@@ -21,7 +21,6 @@ apps=(
   slack
   spectacle
   spotify
-  vanilla
   visual-studio-code
   zoom
 )
