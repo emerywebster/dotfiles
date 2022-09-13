@@ -143,14 +143,8 @@ export GEM_HOME=$HOME/gems
 export PATH=$HOME/gems/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
-# Go
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-export GOPRIVATE="github.com/moovfinancial"
-
 # Source all the other files
-for DOTFILE in ~/dotfiles/system/.{alias,function,rvm}; do
+for DOTFILE in ~/Developer/dotfiles/system/.{alias,function,rvm}; do
   source "$DOTFILE"
 done
 

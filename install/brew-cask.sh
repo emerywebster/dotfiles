@@ -1,8 +1,5 @@
 apps=(
   1password
-  aerial
-  alfred
-  atom
   cleanmymac
   cloudapp
   dash
@@ -12,7 +9,6 @@ apps=(
   figma
   firefox
   google-chrome
-  google-drive
   grammarly
   hyper
   iconjar
@@ -21,12 +17,8 @@ apps=(
   macdown
   notion
   numi
-  postman
-  rocket
-  sequel-pro
+  raycast
   slack
-  sketch
-  skyfonts
   spectacle
   spotify
   vanilla

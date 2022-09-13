@@ -43,14 +43,7 @@ alias gbi='git for-each-ref --sort=committerdate refs/heads/ --format='\''%(HEAD
 ## Environment
 
 alias be="bundle exec"
-alias es="ember serve --live-reload=false --port 4200"
-alias eslr="ember serve --port 4200"
-alias esp="ember s --live-reload=false --proxy=https://thefitbot-staging.herokuapp.com -p 4200"
-alias ysl="yarn run start:local --live-reload=false"
-alias yss="yarn run start:staging --live-reload=false"
-alias yspp="yarn run start:prod --live-reload=false"
 alias js="bundle exec jekyll serve"
-
 alias reload="source ~/.zshrc"
 
 ## Homebrew

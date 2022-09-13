@@ -9,36 +9,16 @@ brew upgrade
 # Install packages
 
 apps=(
-  bat
-  coreutils
-  cmake
-  direnv
   dnsmasq
-  dockutil
-  fasd
-  gifsicle
   git
-  gnu-sed
-  golang
   grep
-  hub
-  hugo
-  httpie
-  imagemagick
-  jq
-  mackup
-  peco
   postgresql
-  psgrep
   python
   redis
   ruby
-  ssh-copy-id
-  tree
   vim
   watchman
   wget
-  wifi-password
   z
 )
 
