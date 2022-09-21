@@ -84,3 +84,7 @@ alias sshew='ssh webb@107.170.99.124'
 ### ngrok
 
 alias ngrok="./ngrok http"
+
+### octave
+
+alias prun="python manage.py runserver"

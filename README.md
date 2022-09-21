@@ -14,7 +14,9 @@ Based on [Lars Kappert's dotfiles](https://github.com/webpro/dotfiles)
 - Install Fonts
   - [Dank Mono](https://gumroad.com/l/dank-mono)
   - [Apple fonts](https://developer.apple.com/fonts/)
-
+- Themes
+  - [Powerlevel10k (zsh)](https://github.com/romkatv/powerlevel10k)
+  - [Night owl (vs code)](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
 ### Apps
 
 - [Bear](https://apps.apple.com/us/app/bear/id1091189122?mt=12)
