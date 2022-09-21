@@ -8,30 +8,10 @@ Based on [Lars Kappert's dotfiles](https://github.com/webpro/dotfiles)
     git clone https://github.com/emerywebster/dotfiles.git
     source dotfiles/install.sh
 
-## New computer setup
+- [Set up SSH Keys](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+## Extras
 
-- [Add SSH Keys](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- Install Fonts
-  - [Dank Mono](https://gumroad.com/l/dank-mono)
-  - [Apple fonts](https://developer.apple.com/fonts/)
-- Themes
-  - [Powerlevel10k (zsh)](https://github.com/romkatv/powerlevel10k)
-  - [Night owl (vs code)](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
-### Apps
-
-- [Bear](https://apps.apple.com/us/app/bear/id1091189122?mt=12)
-- [Contrast](https://apps.apple.com/us/app/contrast-color-accessibility/id1254981365?mt=12)
-- [Dato](https://apps.apple.com/us/app/dato/id1470584107?mt=12)
-- [To Do](https://apps.apple.com/us/app/microsoft-to-do/id1274495053?mt=12)
-
-## Additional resources
-
-- [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
-- [Homebrew](http://brew.sh/) / [FAQ](https://github.com/Homebrew/homebrew/wiki/FAQ)
-- [homebrew-cask](http://caskroom.io/) / [usage](https://github.com/phinze/homebrew-cask/blob/master/USAGE.md)
-- [Bash prompt](http://wiki.archlinux.org/index.php/Color_Bash_Prompt)
-- [Solarized Color Theme for GNU ls](https://github.com/seebi/dircolors-solarized)
-
-## Credits
-
-Many thanks to the [dotfiles community](http://dotfiles.github.io/) and the creators of the incredibly useful tools.
+- [Apple fonts](https://developer.apple.com/fonts/)
+- [Dank Mono font](https://gumroad.com/l/dank-mono)
+- [Night owl theme (vs code)](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
+- [Powerlevel10k theme (zsh)](https://github.com/romkatv/powerlevel10k)
