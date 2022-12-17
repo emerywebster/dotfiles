@@ -16,7 +16,6 @@ apps=(
   loom
   macdown
   notion
-  numi
   raycast
   slack
   spectacle
