@@ -27,5 +27,6 @@
     "editor.formatOnSave": false,
     "editor.tabSize": 2,
     "go.toolsManagement.autoUpdate": true,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "typescript.updateImportsOnFileMove.enabled": "always",
 }
