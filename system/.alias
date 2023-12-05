@@ -88,3 +88,4 @@ alias ngrok="./ngrok http"
 ### octave
 
 alias prun="python manage.py runserver"
+alias gdev="gatsby develop"
