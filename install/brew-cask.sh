@@ -1,7 +1,6 @@
 apps=(
   1password
   cleanmymac
-  cloudapp
   dash
   dropbox
   evernote
@@ -11,10 +10,7 @@ apps=(
   google-chrome
   grammarly
   hyper
-  iconjar
-  iterm2
   loom
-  macdown
   notion
   raycast
   slack
