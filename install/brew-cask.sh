@@ -18,7 +18,6 @@ apps=(
   notion
   raycast
   slack
-  spectacle
   spotify
   visual-studio-code
   zoom
