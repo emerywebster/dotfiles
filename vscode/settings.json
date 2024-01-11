@@ -26,8 +26,6 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "go.toolsManagement.autoUpdate": true,
-    "window.zoomLevel": 1,
-    "typescript.updateImportsOnFileMove.enabled": "always",
     "[glimmer-js]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.foldingStrategy": "indentation"

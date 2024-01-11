@@ -139,9 +139,14 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Ruby
-export GEM_HOME=$HOME/gems
-export PATH=$HOME/gems/bin:$PATH
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+# export GEM_HOME=$HOME/gems
+# export PATH=$HOME/gems/bin:$PATH
+# export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
 
 # Source all the other files
 for DOTFILE in ~/Developer/dotfiles/system/.{alias,function,rvm}; do
