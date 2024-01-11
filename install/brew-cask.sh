@@ -1,5 +1,6 @@
 apps=(
   1password
+  aerial
   cleanmymac
   dash
   dropbox
@@ -12,8 +13,12 @@ apps=(
   hyper
   loom
   notion
-  raycast
+  numi
+  postman
+  rocket
   slack
+  sketch
+  skyfonts
   spotify
   visual-studio-code
   zoom
