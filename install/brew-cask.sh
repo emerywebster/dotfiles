@@ -13,9 +13,8 @@ apps=(
   hyper
   loom
   notion
-  numi
-  postman
-  rocket
+  raycast
+  rectangle
   slack
   sketch
   skyfonts
