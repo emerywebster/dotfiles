@@ -86,7 +86,8 @@ alias sshew='ssh webb@107.170.99.124'
 
 alias ngrok="./ngrok http"
 
-### octave
+### projects
 
 alias prun="python manage.py runserver"
 alias gdev="gatsby develop"
+alias webp="./bin/webpack-dev-server"
