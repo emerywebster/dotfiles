@@ -43,6 +43,7 @@ alias gbi='git for-each-ref --sort=committerdate refs/heads/ --format='\''%(HEAD
 ## Environment
 
 alias be="bundle exec"
+alias bers="bundle exec rails server"
 alias js="bundle exec jekyll serve"
 alias reload="source ~/.zshrc"
 

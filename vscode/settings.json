@@ -7,8 +7,8 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
     "prettier.printWidth": 120,
     "prettier.singleQuote": true,
     "prettier.useTabs": true,
@@ -23,7 +23,7 @@
         "git-rebase-todo": "default"
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.tabSize": 2,
     "go.toolsManagement.autoUpdate": true,
     "[glimmer-js]": {
@@ -43,5 +43,9 @@
             "rule": "*",
             "severity": "warn"
         }
+    ],
+    "prettier.documentSelectors": [
+        "**/*.gts",
+        "**/*.gjs"
     ]
 }
