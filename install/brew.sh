@@ -11,6 +11,7 @@ brew upgrade
 apps=(
   dnsmasq
   git
+  gh
   grep
   postgresql
   python
