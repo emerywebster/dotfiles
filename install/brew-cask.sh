@@ -9,7 +9,7 @@ apps=(
   figma
   firefox
   google-chrome
-  grammarly
+  grammarly-desktop
   hyper
   loom
   notion
