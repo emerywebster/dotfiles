@@ -1,51 +1,48 @@
 {
-    "workbench.colorTheme": "Night Owl",
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.fontSize": 16,
-    "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
-    "git.confirmSync": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.formatOnPaste": false,
-    "editor.formatOnType": false,
-    "prettier.printWidth": 120,
-    "prettier.singleQuote": true,
-    "prettier.useTabs": true,
-    "sasslint.configFile": ".sass-lint.yml",
-    "editor.wordWrap": "on",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "files.autoSave": "onFocusChange",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.statusBar.visible": true,
-    "workbench.editorAssociations": {
-        "git-rebase-todo": "default"
-    },
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.formatOnSave": false,
-    "editor.tabSize": 2,
-    "go.toolsManagement.autoUpdate": true,
-    "[glimmer-js]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.foldingStrategy": "indentation"
-    },
-    "[glimmer-ts]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.foldingStrategy": "indentation"
-    },
-    "eslint.validate": [
-        "glimmer-ts",
-        "glimmer-js"
-    ],
-    "eslint.rules.customizations": [
-        {
-            "rule": "*",
-            "severity": "warn"
-        }
-    ],
-    "prettier.documentSelectors": [
-        "**/*.gts",
-        "**/*.gjs"
-    ]
+	"workbench.colorTheme": "Night Owl",
+	"workbench.startupEditor": "newUntitledFile",
+	"editor.fontSize": 16,
+	"editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+	"git.confirmSync": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"prettier.printWidth": 120,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true,
+	"sasslint.configFile": ".sass-lint.yml",
+	"editor.wordWrap": "on",
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"files.autoSave": "onFocusChange",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.statusBar.visible": true,
+	"workbench.editorAssociations": {
+		"git-rebase-todo": "default"
+	},
+	"security.workspace.trust.untrustedFiles": "open",
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"go.toolsManagement.autoUpdate": true,
+	"[glimmer-js]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.foldingStrategy": "indentation"
+	},
+	"[glimmer-ts]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.foldingStrategy": "indentation"
+	},
+	"eslint.validate": ["glimmer-ts", "glimmer-js"],
+	"eslint.rules.customizations": [
+		{
+			"rule": "*",
+			"severity": "warn"
+		}
+	],
+	"prettier.documentSelectors": ["**/*.gts", "**/*.gjs"],
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"debug.disassemblyView.showSourceCode": false,
+	"prisma.showPrismaDataPlatformNotification": false
 }
