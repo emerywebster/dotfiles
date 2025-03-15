@@ -4,6 +4,12 @@
 #
 # https://github.com/romkatv/powerlevel10k#oh-my-zsh
 
+# Homebrew (ARM)
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+
+# PostgreSQL
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -125,9 +131,6 @@ fi
 # Homebrew (Intel)
 export PATH="/usr/local/sbin:$PATH"
 
-# Homebrew (ARM)
-# export PATH=/opt/homebrew/bin:$PATH
-
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
@@ -135,9 +138,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# Postgres
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # React Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
