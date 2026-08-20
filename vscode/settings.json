@@ -43,5 +43,9 @@
             "rule": "*",
             "severity": "warn"
         }
+    ],
+    "prettier.documentSelectors": [
+        "**/*.gts",
+        "**/*.gjs"
     ]
 }

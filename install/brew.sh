@@ -12,6 +12,7 @@ apps=(
   dnsmasq
   git
   grep
+  mole
   postgresql
   python
   redis
