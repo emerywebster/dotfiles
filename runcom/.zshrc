@@ -43,7 +43,10 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 # Aliases & functions
-for DOTFILE in ~/dotfiles/system/.{alias,function}; do
+# Resolve the repo from this file's real location (~/.zshrc is a symlink into it),
+# so the clone can live anywhere (~/dotfiles, ~/Developer/dotfiles, ...)
+export DOTFILES_DIR="${${(%):-%N}:A:h:h}"
+for DOTFILE in "$DOTFILES_DIR"/system/.{alias,function}; do
   source "$DOTFILE"
 done
 
