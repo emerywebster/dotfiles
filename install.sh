@@ -37,6 +37,10 @@ brew autoupdate start 86400 2>/dev/null || true
 . "$DOTFILES_DIR/install/zsh.sh"
 . "$DOTFILES_DIR/install/node.sh"
 
+# macOS settings
+
+. "$DOTFILES_DIR/macos/defaults.sh"
+
 # Install extra stuff (private, not in this repo)
 
 if [ -d "$EXTRA_DIR" ] && [ -f "$EXTRA_DIR/install.sh" ]; then
