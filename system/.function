@@ -19,7 +19,7 @@ function df-update () {
   sudo softwareupdate -i -a
   brew update
   brew upgrade
-  npm install npm -g
+  brew autoremove
   npm update -g
   gem update --system
   gem update

@@ -10,7 +10,6 @@ alias dl="cd ~/Downloads"
 alias dk="cd ~/Desktop"
 alias g="git"
 alias j="jobs"
-alias json="json -c"
 alias rr="rm -rf"
 alias s="cd ~/Sites"
 alias h="history"
@@ -47,10 +46,9 @@ alias js="bundle exec jekyll serve"
 alias reload="source ~/.zshrc"
 
 ## Homebrew
+# autoremove drops orphaned deps; cleanup --prune=all clears old versions & cache
 
-alias brewup="brew update; brew upgrade; brew cleanup --prune-prefix; brew doctor"
-alias xbrew="arch -arm64 brew"
-alias xbrewup="xbrew update; xbrew upgrade; xbrew cleanup --prune-prefix; xbrew doctor"
+alias brewup="brew update && brew upgrade && brew autoremove && brew cleanup --prune=all && brew doctor"
 
 ## Request using GET, POST, etc. method
 
@@ -67,7 +65,7 @@ alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
 
 alias quit="exit"
 alias week="date +%V"
-alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+alias speedtest="networkquality"
 
 ## Edit the hosts file
 
@@ -75,15 +73,11 @@ alias hosts='code /etc/hosts'
 
 ## Flush DNS
 
-alias flushdns='dscacheutil -flushcache'
+alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
 ### ssh for emerywebster.com
 
 alias sshew='ssh webb@107.170.99.124'
-
-### ngrok
-
-alias ngrok="./ngrok http"
 
 ### octave
 
