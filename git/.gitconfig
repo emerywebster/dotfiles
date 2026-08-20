@@ -68,3 +68,8 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+
+# Machine-specific overrides (e.g. work email) — untracked, wins over
+# everything above because it's included last
+[include]
+	path = ~/.gitconfig.local
