@@ -43,7 +43,6 @@ cask "arc"
 cask "brave-browser"
 cask "chatgpt"
 cask "cleanmymac"
-cask "fantastical"
 cask "figma"
 cask "firefox"
 cask "font-fira-code"
@@ -66,6 +65,7 @@ cask "zoom"
 
 # Mac App Store (requires being signed in to the App Store)
 mas "Bear", id: 1091189122
+mas "Fantastical", id: 975937182
 mas "Keynote", id: 409183694
 mas "Things 3", id: 904280696
 
