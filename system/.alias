@@ -42,6 +42,7 @@ alias gbi='git for-each-ref --sort=committerdate refs/heads/ --format='\''%(HEAD
 ## Environment
 
 alias be="bundle exec"
+alias bers="bundle exec rails server"
 alias js="bundle exec jekyll serve"
 alias reload="source ~/.zshrc"
 
@@ -79,7 +80,9 @@ alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
 alias sshew='ssh webb@107.170.99.124'
 
-### octave
+### projects
 
 alias prun="python manage.py runserver"
 alias gdev="gatsby develop"
+alias webp="./bin/webpack-dev-server"
+alias dbmig="./bin/rails db:migrate"
