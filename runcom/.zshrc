@@ -46,3 +46,6 @@ export PATH="$HOME/.local/bin:$PATH"
 for DOTFILE in ~/dotfiles/system/.{alias,function}; do
   source "$DOTFILE"
 done
+
+# Machine-specific secrets & exports (untracked)
+[ -f ~/.extra/.env ] && source ~/.extra/.env
