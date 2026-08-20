@@ -1,0 +1,8 @@
+# Ghostty config — docs: https://ghostty.org/docs/config
+# Currently running with defaults; uncomment/add as needed.
+# Reload with cmd+shift+, (or restart Ghostty).
+
+# font-family = Dank Mono
+# font-size = 13
+# theme = catppuccin-mocha
+# macos-titlebar-style = tabs
