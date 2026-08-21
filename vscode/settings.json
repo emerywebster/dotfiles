@@ -5,7 +5,7 @@
 	"editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
 	"git.confirmSync": false,
 	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
 	"editor.formatOnPaste": true,
 	"editor.formatOnType": true,
@@ -20,7 +20,7 @@
 	"workbench.iconTheme": "vscode-icons",
 	"workbench.statusBar.visible": true,
 	"workbench.editorAssociations": {
-		"git-rebase-todo": "default"
+		"git-rebase-todo": "default",
 	},
 	"security.workspace.trust.untrustedFiles": "open",
 	"editor.formatOnSave": true,
@@ -28,21 +28,20 @@
 	"go.toolsManagement.autoUpdate": true,
 	"[glimmer-js]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.foldingStrategy": "indentation"
+		"editor.foldingStrategy": "indentation",
 	},
 	"[glimmer-ts]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.foldingStrategy": "indentation"
+		"editor.foldingStrategy": "indentation",
 	},
-	"eslint.validate": ["glimmer-ts", "glimmer-js"],
 	"eslint.rules.customizations": [
 		{
 			"rule": "*",
-			"severity": "warn"
-		}
+			"severity": "warn",
+		},
 	],
 	"prettier.documentSelectors": ["**/*.gts", "**/*.gjs"],
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"debug.disassemblyView.showSourceCode": false,
-	"prisma.showPrismaDataPlatformNotification": false
+	"prisma.showPrismaDataPlatformNotification": false,
 }
