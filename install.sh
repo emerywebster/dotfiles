@@ -36,6 +36,7 @@ brew autoupdate start 86400 2>/dev/null || true
 
 . "$DOTFILES_DIR/install/zsh.sh"
 . "$DOTFILES_DIR/install/node.sh"
+. "$DOTFILES_DIR/install/claude.sh"
 
 # macOS settings
 

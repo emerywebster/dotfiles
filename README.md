@@ -17,6 +17,7 @@ Then:
 - Sign in to the Mac App Store first if `mas` installs fail
 - [Set up SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Run `p10k configure` if the prompt needs re-tuning
+- Sign in to `claude` and `codex`, then rerun `install.sh` if any plugin install warned
 - Raycast/Arc/etc. settings sync through their own accounts, not this repo
 
 ## Layout
@@ -25,6 +26,7 @@ Then:
 | ----------- | ----------------------------------------------------------- |
 | `Brewfile`  | CLI tools, apps, Mac App Store apps, VS Code extensions     |
 | `install/`  | oh-my-zsh + powerlevel10k, node via nvm/corepack            |
+| `claude/`   | Claude Code `settings.json` (symlinked to `~/.claude`)      |
 | `runcom/`   | `.zshrc`, `.gemrc` (symlinked to `~`)                       |
 | `system/`   | aliases and functions sourced by `.zshrc`                   |
 | `git/`      | `.gitconfig`, global gitignore                              |
