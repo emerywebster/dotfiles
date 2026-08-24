@@ -5,6 +5,7 @@
 #   Remove drift:         brew bundle cleanup --force
 
 tap "domt4/autoupdate"
+tap "supabase/tap"
 
 # Adopt apps that were installed manually instead of failing on them
 cask_args adopt: true
@@ -29,6 +30,7 @@ brew "psgrep"
 brew "redis"
 brew "ruby"
 brew "ssh-copy-id"
+brew "supabase/tap/supabase"
 brew "tree"
 brew "vercel"
 brew "watchman"
@@ -43,6 +45,7 @@ cask "arc"
 cask "brave-browser"
 cask "chatgpt"
 cask "cleanmymac"
+cask "codex"
 cask "figma"
 cask "firefox"
 cask "font-fira-code"
