@@ -4,7 +4,7 @@
       "mcp__pencil"
     ]
   },
-  "model": "claude-fable-5[1m]",
+  "model": "opus[1m]",
   "enabledPlugins": {
     "swift-lsp@claude-plugins-official": true,
     "figma@claude-plugins-official": true,

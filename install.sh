@@ -25,6 +25,13 @@ if ! command -v brew >/dev/null 2>&1; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Third-party taps must be trusted before brew will load their formulae.
+# Trust lives in ~/.homebrew/trust.json (untracked), so re-assert it here.
+for tap in domt4/autoupdate supabase/tap; do
+  brew trust --tap "$tap" 2>/dev/null || true
+done
+
 brew update
 brew bundle install --file="$DOTFILES_DIR/Brewfile"
 
