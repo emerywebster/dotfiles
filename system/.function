@@ -83,3 +83,69 @@ al() {
   echo pruning networks:
   docker network prune -f
  }
+
+# List local servers listening on TCP ports: port, PID, command, project dir.
+# By default hides GUI-app/system noise (Bonjour, Electron helpers, daemons) and
+# shows things started from a real project directory. `servers -a` shows everything.
+function servers () {
+  local all=0
+  [[ "$1" == "-a" || "$1" == "--all" ]] && all=1
+
+  {
+    printf "%-7s %-8s %-24s %s\n" "PORT" "PID" "COMMAND" "PROJECT"
+    printf '%s\n' "----------------------------------------------------------------------------"
+  }
+
+  # -a ANDs the selections; without it lsof ORs -i and -u and returns every open file
+  lsof -a -iTCP -sTCP:LISTEN -n -P -u "$USER" 2>/dev/null \
+  | awk 'NR>1 {
+      pid=$2
+      # the address column position shifts (IPv4/IPv6, trailing "(LISTEN)"),
+      # so take the last field that looks like host:port
+      addr=""
+      for (i=NF; i>=1; i--) if ($i ~ /:[0-9]+$/) { addr=$i; break }
+      if (addr == "") next
+      port=addr; sub(/^.*:/,"",port)
+      key=pid":"port
+      if (!seen[key]++) print pid, port
+    }' \
+  | while read -r pid port; do
+      cmd=$(ps -p "$pid" -o comm= 2>/dev/null)
+      cmd=${cmd##*/}
+      cwd=$(lsof -a -d cwd -p "$pid" -Fn 2>/dev/null | awk '/^n/ {print substr($0,2); exit}')
+
+      if (( ! all )); then
+        # Bonjour / AirPlay / peer-discovery chatter, not dev servers
+        [[ "$port" == 5353 || "$port" == 16384 || "$port" == 7000 ]] && continue
+        # Electron & friends spawn a helper per tab/window
+        case "$cmd" in
+          *Helper*|*"(Renderer)"*|*"(Service)"*|*"(GPU)"*|*Crash-Handler*) continue ;;
+        esac
+        # Apps and daemons run from / or a sandbox container; dev servers run from a project
+        [[ -z "$cwd" || "$cwd" == "/" || "$cwd" == "$HOME/Library"* ]] && continue
+      fi
+
+      printf "%-7s %-8s %-24s %s\n" "$port" "$pid" "${cmd:-?}" "${cwd/#$HOME/~}"
+    done \
+  | sort -n
+}
+
+# Kill whatever is listening on a port: killport 3000 [-9]
+function killport () {
+  local port="$1" sig="${2:--TERM}"
+  if [[ -z "$port" ]]; then
+    echo "Usage: killport <port> [-9]"
+    return 1
+  fi
+  local pids
+  pids=$(lsof -tiTCP:"$port" -sTCP:LISTEN 2>/dev/null)
+  if [[ -z "$pids" ]]; then
+    echo "Nothing listening on port $port"
+    return 1
+  fi
+  echo "$pids" | while read -r pid; do
+    cmd=$(ps -p "$pid" -o comm= 2>/dev/null)
+    echo "Killing ${cmd##*/} (PID $pid) on port $port"
+    kill "$sig" "$pid"
+  done
+}

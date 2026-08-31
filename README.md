@@ -43,6 +43,14 @@ brew bundle cleanup          # dry-run: installed but not in Brewfile
 
 Private, machine-only extras go in `~/.extra/install.sh` (sourced if present).
 
+## Finding dev servers
+
+```sh
+servers        # ports, PIDs, commands and project dirs for local dev servers
+servers -a     # include GUI apps and system daemons
+killport 3000  # kill whatever is listening on a port (add -9 to force)
+```
+
 ## Extras
 
 - [Apple fonts](https://developer.apple.com/fonts/)
