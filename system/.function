@@ -84,17 +84,12 @@ al() {
   docker network prune -f
  }
 
-# List local servers listening on TCP ports: port, PID, command, project dir.
-# By default hides GUI-app/system noise (Bonjour, Electron helpers, daemons) and
-# shows things started from a real project directory. `servers -a` shows everything.
-function servers () {
-  local all=0
-  [[ "$1" == "-a" || "$1" == "--all" ]] && all=1
-
-  {
-    printf "%-7s %-8s %-24s %s\n" "PORT" "PID" "COMMAND" "PROJECT"
-    printf '%s\n' "----------------------------------------------------------------------------"
-  }
+# Emit one tab-separated "port<TAB>pid<TAB>command<TAB>cwd" line per TCP socket
+# the current user is listening on. Pass 1 to include GUI-app/system noise
+# (Bonjour, Electron helpers, daemons); anything else keeps only things started
+# from a real project directory. Shared by `servers` and `killport`.
+function _servers_raw () {
+  local all="${1:-0}"
 
   # -a ANDs the selections; without it lsof ORs -i and -u and returns every open file
   lsof -a -iTCP -sTCP:LISTEN -n -P -u "$USER" 2>/dev/null \
@@ -114,7 +109,7 @@ function servers () {
       cmd=${cmd##*/}
       cwd=$(lsof -a -d cwd -p "$pid" -Fn 2>/dev/null | awk '/^n/ {print substr($0,2); exit}')
 
-      if (( ! all )); then
+      if [[ "$all" != 1 ]]; then
         # Bonjour / AirPlay / peer-discovery chatter, not dev servers
         [[ "$port" == 5353 || "$port" == 16384 || "$port" == 7000 ]] && continue
         # Electron & friends spawn a helper per tab/window
@@ -125,27 +120,78 @@ function servers () {
         [[ -z "$cwd" || "$cwd" == "/" || "$cwd" == "$HOME/Library"* ]] && continue
       fi
 
-      printf "%-7s %-8s %-24s %s\n" "$port" "$pid" "${cmd:-?}" "${cwd/#$HOME/~}"
+      printf '%s\t%s\t%s\t%s\n' "$port" "$pid" "${cmd:-?}" "$cwd"
     done \
   | sort -n
 }
 
+# Print one server per line, padded into columns.
+function _servers_row () {
+  local port="$1" pid="$2" cmd="$3" cwd="$4"
+  # keep COMMAND inside its column so PROJECT stays aligned (ASCII "..." so the
+  # padding maths matches the byte count)
+  (( ${#cmd} > 24 )) && cmd="${cmd:0:21}..."
+  printf "%-7s %-8s %-24s %s\n" "$port" "$pid" "$cmd" "${cwd/#$HOME/~}"
+}
+
+# List local servers listening on TCP ports: port, PID, command, project dir.
+# By default hides GUI-app/system noise and shows things started from a real
+# project directory. `servers -a` shows everything.
+function servers () {
+  local all=0
+  [[ "$1" == "-a" || "$1" == "--all" ]] && all=1
+
+  printf "%-7s %-8s %-24s %s\n" "PORT" "PID" "COMMAND" "PROJECT"
+  printf '%s\n' "----------------------------------------------------------------------------"
+
+  _servers_raw "$all" | while IFS=$'\t' read -r port pid cmd cwd; do
+    _servers_row "$port" "$pid" "$cmd" "$cwd"
+  done
+}
+
 # Kill whatever is listening on a port: killport 3000 [-9]
+# Also takes a command or project substring: killport corrado
+# With no argument, lists the running servers and prompts for a port.
 function killport () {
-  local port="$1" sig="${2:--TERM}"
-  if [[ -z "$port" ]]; then
-    echo "Usage: killport <port> [-9]"
-    return 1
+  local target="$1" sig="${2:--TERM}"
+
+  if [[ -z "$target" ]]; then
+    servers
+    printf '\nPort to kill (blank to cancel): '
+    read -r target
+    [[ -z "$target" ]] && return 1
   fi
+
   local pids
-  pids=$(lsof -tiTCP:"$port" -sTCP:LISTEN 2>/dev/null)
-  if [[ -z "$pids" ]]; then
-    echo "Nothing listening on port $port"
-    return 1
+  if [[ "$target" =~ ^[0-9]+$ ]]; then
+    pids=$(lsof -tiTCP:"$target" -sTCP:LISTEN 2>/dev/null)
+    if [[ -z "$pids" ]]; then
+      echo "Nothing listening on port $target"
+      return 1
+    fi
+  else
+    # not a port number - match it against the command and project columns
+    local matches
+    matches=$(_servers_raw 0 | grep -i -- "$target")
+    if [[ -z "$matches" ]]; then
+      echo "No server matching '$target'"
+      return 1
+    fi
+    if (( $(printf '%s\n' "$matches" | wc -l) > 1 )); then
+      echo "Multiple servers match '$target':"
+      printf '%s\n' "$matches" | while IFS=$'\t' read -r p i c w; do
+        _servers_row "$p" "$i" "$c" "$w"
+      done
+      echo "Re-run with a port number."
+      return 1
+    fi
+    target=$(printf '%s\n' "$matches" | cut -f1)
+    pids=$(printf '%s\n' "$matches" | cut -f2)
   fi
+
   echo "$pids" | while read -r pid; do
     cmd=$(ps -p "$pid" -o comm= 2>/dev/null)
-    echo "Killing ${cmd##*/} (PID $pid) on port $port"
+    echo "Killing ${cmd##*/} (PID $pid) on port $target"
     kill "$sig" "$pid"
   done
 }

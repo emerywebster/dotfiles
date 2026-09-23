@@ -46,9 +46,11 @@ Private, machine-only extras go in `~/.extra/install.sh` (sourced if present).
 ## Finding dev servers
 
 ```sh
-servers        # ports, PIDs, commands and project dirs for local dev servers
-servers -a     # include GUI apps and system daemons
-killport 3000  # kill whatever is listening on a port (add -9 to force)
+servers          # ports, PIDs, commands and project dirs for local dev servers
+servers -a       # include GUI apps and system daemons
+killport 3000    # kill whatever is listening on a port (add -9 to force)
+killport corrado # or match on the command / project name instead of the port
+killport         # no argument: list the servers and prompt for a port
 ```
 
 ## Extras
