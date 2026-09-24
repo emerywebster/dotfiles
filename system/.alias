@@ -1,11 +1,16 @@
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
+
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
+
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
+
 # For a full list of active aliases, run `alias`.
+
 #
+
 # Aliases
 
-alias _="sudo"
+alias \_="sudo"
 alias dl="cd ~/Downloads"
 alias dk="cd ~/Desktop"
 alias g="git"
@@ -47,6 +52,7 @@ alias js="bundle exec jekyll serve"
 alias reload="source ~/.zshrc"
 
 ## Homebrew
+
 # autoremove drops orphaned deps; cleanup --prune=all clears old versions & cache
 
 alias brewup="brew update && brew upgrade && brew autoremove && brew cleanup --prune=all && brew doctor"
@@ -54,13 +60,13 @@ alias brewup="brew update && brew upgrade && brew autoremove && brew cleanup --p
 ## Request using GET, POST, etc. method
 
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-  alias "$method"="lwp-request -m '$method'"
+alias "$method"="lwp-request -m '$method'"
 done
 
 ## Recursively remove Apple meta files
 
-alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;"
-alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
+alias cleanupds="find . -type f -name '_.DS_Store' -ls -exec /bin/rm {} \;"
+alias cleanupad="find . -type d -name '.AppleD_' -ls -exec /bin/rm -r {} \;"
 
 ## Miscellaneous
 
@@ -87,3 +93,6 @@ alias gdev="gatsby develop"
 alias webp="./bin/webpack-dev-server"
 alias dbmig="./bin/rails db:migrate"
 alias bwdev="pnpm exec vite --config vite.local.config.ts"
+
+alias cprod="pnpm dlx eas-cli@latest build --platform ios --profile"
+alias cdev="pnpm dlx eas-cli@latest build --platform ios --profile development"
