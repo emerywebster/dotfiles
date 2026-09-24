@@ -94,5 +94,9 @@ alias webp="./bin/webpack-dev-server"
 alias dbmig="./bin/rails db:migrate"
 alias bwdev="pnpm exec vite --config vite.local.config.ts"
 
-alias cprod="pnpm dlx eas-cli@latest build --platform ios --profile"
-alias cdev="pnpm dlx eas-cli@latest build --platform ios --profile development"
+alias exprod="pnpm dlx eas-cli@latest build --platform ios --profile"
+alias exdev="pnpm dlx eas-cli@latest build --platform ios --profile development"
+
+alias cprod="pnpm --dir apps/mobile ios:prod"
+alias cdev1="pnpm --dir apps/mobile prebuild:dev 
+alias cdev2="pnpm --dir apps/mobile exec expo run:ios --device"
